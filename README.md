@@ -52,16 +52,16 @@ You should see:
 
 ```bash
 # Fuzz with all payloads (default)
-python api_fuzzer.py
+python3 api_fuzzer.py
 
 # Fuzz with only SQL Injection payloads
-python api_fuzzer.py --category sql_injection
+python3 api_fuzzer.py --category sql_injection
 
 # Fuzz with XSS payloads
-python api_fuzzer.py --category xss
+python3 api_fuzzer.py --category xss
 
 # See all categories
-python api_fuzzer.py --list-categories
+python3 api_fuzzer.py --list-categories
 ```
 
 ---
