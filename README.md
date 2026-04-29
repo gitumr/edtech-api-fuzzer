@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ### 2. Start the Demo API (Terminal 1)
 
 ```bash
-python demo_api.py
+python3 demo_api.py
 ```
 
 You should see:
