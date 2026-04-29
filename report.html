@@ -1,0 +1,232 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>API Security Assessment Report</title>
+        <style>
+            :root {
+                --high: #e74c3c; --medium: #f39c12; --low: #3498db; --info: #95a5a6;
+                --bg: #f8f9fa; --text: #2c3e50;
+            }
+            body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 40px; }
+            .card { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 30px; margin-bottom: 30px; }
+            h1, h2, h3 { color: #1a252f; margin-top: 0; }
+            .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-bottom: 30px; }
+            .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+            .stat { padding: 20px; border-radius: 10px; text-align: center; color: white; }
+            .stat.total { background: #34495e; }
+            .stat.high { background: var(--high); }
+            .stat.medium { background: var(--medium); }
+            .stat.anom { background: var(--low); }
+            
+            table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+            th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+            th { background: #fdfdfd; font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+            
+            .sev-badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; color: white; display: inline-block; }
+            .HIGH { background: var(--high); }
+            .MEDIUM { background: var(--medium); }
+            .LOW { background: var(--low); }
+            
+            .payload-box { background: #2c3e50; color: #ecf0f1; padding: 12px; border-radius: 6px; font-family: 'Consolas', monospace; font-size: 13px; margin-top: 5px; border-left: 4px solid #3498db; }
+            .evidence { color: var(--high); font-style: italic; font-size: 13px; margin-top: 5px; }
+            
+            .disclaimer { font-size: 12px; color: #7f8c8d; margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px; }
+            .meta-info { display: flex; gap: 40px; margin-top: 10px; color: #7f8c8d; font-size: 14px; }
+            .meta-item b { color: #2c3e50; }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="header">
+                <div>
+                    <h1>🛡️ API Security Assessment</h1>
+                    <div class="meta-info">
+                        <div class="meta-item"><b>Target:</b> https://jsonplaceholder.typicode.com</div>
+                        <div class="meta-item"><b>Author:</b> EdTech Security Module</div>
+                        <div class="meta-item"><b>Time:</b> 2026-04-26 18:07:32</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-grid">
+                <div class="stat total"><strong>445</strong><br>Total Requests</div>
+                <div class="stat high"><strong>9</strong><br>High (Critical)</div>
+                <div class="stat medium"><strong>1</strong><br>Medium (Risk)</div>
+                <div class="stat anom"><strong>5</strong><br>Low (Info)</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🚨 Critical Findings</h2>
+            <table>
+                <thead>
+                    <tr><th>Severity</th><th>Endpoint</th><th>Vulnerability & Confidence</th><th>Evidence & Payload</th></tr>
+                </thead>
+                <tbody>
+    
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Generic Web Test (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">nan</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Generic Web Test (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">inf</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Generic Web Test (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">-inf</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Add Student (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">nan</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Add Student (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">inf</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Add Student (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">-inf</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Login (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">nan</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Login (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">inf</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge HIGH">HIGH</span></td>
+                        <td><strong>Login (POST)</strong><br><small>all</small></td>
+                        <td>Status Change (404 -> ERROR) (Conf: 90%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Status Change (404 -> ERROR)</div>
+                            <div class="payload-box">-inf</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge MEDIUM">MEDIUM</span></td>
+                        <td><strong>Admin Users (GET) — No Auth</strong><br><small>all</small></td>
+                        <td>Significant Delay (3.63s) (Conf: 70%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Baseline Anomaly</div>
+                            <div class="payload-box">&& id</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge LOW">LOW</span></td>
+                        <td><strong>Generic Web Test (POST)</strong><br><small>all</small></td>
+                        <td>Reflected Special Chars (Conf: 15%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Payload context: {}</div>
+                            <div class="payload-box">{}</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge LOW">LOW</span></td>
+                        <td><strong>Add Student (POST)</strong><br><small>all</small></td>
+                        <td>Reflected Special Chars (Conf: 15%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Payload context: {}</div>
+                            <div class="payload-box">{}</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge LOW">LOW</span></td>
+                        <td><strong>Search Students (GET ?name=)</strong><br><small>all</small></td>
+                        <td>Reflected Special Chars (Conf: 15%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Payload context: {}</div>
+                            <div class="payload-box">{}</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge LOW">LOW</span></td>
+                        <td><strong>Login (POST)</strong><br><small>all</small></td>
+                        <td>Reflected Special Chars (Conf: 15%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Payload context: {}</div>
+                            <div class="payload-box">{}</div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td><span class="sev-badge LOW">LOW</span></td>
+                        <td><strong>Admin Users (GET) — No Auth</strong><br><small>all</small></td>
+                        <td>Reflected Special Chars (Conf: 15%)</td>
+                        <td>
+                            <div class="evidence">Finding Proof: Payload context: [
+  {
+    "id": 1,
+    "name": "Leanne Gra</div>
+                            <div class="payload-box"> </div>
+                        </td>
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Academic Purpose Only:</strong> This report was generated using the EdTech API Fuzzer. 
+            All tests were performed in a controlled environment. Unauthorized testing of external systems is prohibited.
+        </div>
+    </body>
+    </html>
+    
